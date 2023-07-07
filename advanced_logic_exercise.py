@@ -1,7 +1,7 @@
 # For the following list of numbers:
 
 numbers = [1, 6, 2, 2, 7, 1, 6, 13, 99, 7]
-
+dataset = [11, 6, 4, 99, 7, 11]
 # 1. Print out a list of the even integers:
 
 def even_numbers(list_of_numbers):
@@ -18,9 +18,9 @@ print(difference(numbers))
 
 # 3. Print True if the list contains a 2 next to a 2 somewhere.
 
-def check(lst):
-    last = lst[0]
-    for num in lst[1:]:
+def check(list_of_numbers):
+    last = list_of_numbers[0]
+    for num in list_of_numbers[1:]:
         if num == last:
             if num == 2:
                 return True
@@ -34,6 +34,17 @@ print(check(numbers))
 #    
 #    So [11, 6, 4, 99, 7, 11] would have sum of 22
 
+def sum_skipping(list_of_numbers):
+    sum_total = iter(list_of_numbers)
+    total = 0
+    for x in sum_total:
+        if x == 6:
+            7 in sum_total
+        else:
+            total += x
+    return total
+    
+print(sum_skipping(numbers))
 
 # 5. HARD! Print the sum of the numbers. 
 #    Except the number 13 is very unlucky, so it does not count.
