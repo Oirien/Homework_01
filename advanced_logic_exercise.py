@@ -18,6 +18,16 @@ print(difference(numbers))
 
 # 3. Print True if the list contains a 2 next to a 2 somewhere.
 
+def check(lst):
+    last = lst[0]
+    for num in lst[1:]:
+        if num == last:
+            if num == 2:
+                return True
+        last = num
+    return False
+
+print(check(numbers))
 
 # 4. Print the sum of the numbers, 
 #    BUT ignore any section of numbers starting with a 6 and extending to the next 7.
