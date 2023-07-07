@@ -19,7 +19,7 @@ print(difference(numbers))
 
 # 3. Print True if the list contains a 2 next to a 2 somewhere.
 
-def check(list_of_numbers):
+def two_twos(list_of_numbers):
     last = list_of_numbers[0]
     for num in list_of_numbers[1:]:
         if num == last:
@@ -28,7 +28,7 @@ def check(list_of_numbers):
         last = num
     return False
 
-print(check(numbers))
+print(two_twos(numbers))
 
 # 4. Print the sum of the numbers, 
 #    BUT ignore any section of numbers starting with a 6 and extending to the next 7.
@@ -54,10 +54,33 @@ print(sum_skipping(numbers))
 #
 #    So [5, 13, 2] would have sum of 5. 
 
+# def unlucky_sum(list_of_numbers):
+#     sum_total = iter(list_of_numbers)
+#     total = 0
+#     for num in list_of_numbers:
+#         if num == 13:
+#             13 in sum_total
+#         else:
+#             total += num
+#     return total
+
+# def unlucky_sum(list_of_numbers):
+#     skip_until = -1
+#     total = 0
+#     for num in list_of_numbers:
+#         if num == 13:
+#             skip_until += 13
+#         else:
+#             total += num
+#     return total
+
 def unlucky_sum(list_of_numbers):
     total = 0
-    for num in list_of_numbers:
+    last = list_of_numbers[0]
+    for num in list_of_numbers[0:]:
         if num == 13:
+            if num == last:
+                continue
             continue
         else:
             total += num
