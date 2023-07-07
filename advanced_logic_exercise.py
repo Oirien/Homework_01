@@ -85,5 +85,8 @@ def unlucky_sum(list_of_numbers):
             iteration += 1
     return total
 
+# sum([i for i in list_of_numbers if i != 13 and i-1 != 13])
+# solution I got given as an example after I had completed it.
+
 print(unlucky_sum(test_data))
 print(unlucky_sum(numbers))
