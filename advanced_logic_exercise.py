@@ -76,14 +76,13 @@ print(sum_skipping(numbers))
 
 def unlucky_sum(list_of_numbers):
     total = 0
-    last = list_of_numbers[0]
-    for num in list_of_numbers[0:]:
-        if num == 13:
-            if num == last:
-                continue
-            continue
+    iteration = 0
+    while iteration < len(list_of_numbers):
+        if list_of_numbers[iteration] == 13:
+            iteration += 2
         else:
-            total += num
+            total += list_of_numbers[iteration]
+            iteration += 1
     return total
 
 print(unlucky_sum(test_data))
