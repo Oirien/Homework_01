@@ -113,5 +113,22 @@ change_hometown("Erik", "Edinburgh")
 print(user_hometown("Erik"))
 # 9. Add a pet dog to Erik called "fluffy"
 
+def add_pet(person, pet, species):
+    users[person]["pets"].append({
+        "name": pet,
+        "species": species
+    })
+
+add_pet("Erik", "fluffy", "dog")
+
+print(user_pet_species("Erik", 4))
 
 # 10. Add another person to the users dictionary
+
+def add_user(person):
+    users.update({person: {}})
+
+add_user("Shelby")
+
+print(users)
+
