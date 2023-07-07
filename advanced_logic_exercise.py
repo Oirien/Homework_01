@@ -4,6 +4,10 @@ numbers = [1, 6, 2, 2, 7, 1, 6, 13, 99, 7]
 
 # 1. Print out a list of the even integers:
 
+def even_numbers(list_of_numbers):
+    return list(filter(lambda x: (x % 2 == 0), list_of_numbers))
+
+print(even_numbers(numbers))
 
 # 2. Print the difference between the largest and smallest value:
 
