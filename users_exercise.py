@@ -95,6 +95,18 @@ def get_even_numbers(person):
 print(get_even_numbers("Avril"))
 
 # 7. Erik is one lottery number short! Add the number `7` to be included in his lottery numbers
+
+def add_lotto_num(person, number):
+    users[person]["lottery_numbers"].append(number)
+
+add_lotto_num("Erik", 7)
+
+print(user_lotto("Erik"))
+
 # 8. Change Erik's hometown to Edinburgh
+
+def change_hometown(person, hometown):
+    
+
 # 9. Add a pet dog to Erik called "fluffy"
 # 10. Add another person to the users dictionary
