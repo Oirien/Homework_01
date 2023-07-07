@@ -106,7 +106,12 @@ print(user_lotto("Erik"))
 # 8. Change Erik's hometown to Edinburgh
 
 def change_hometown(person, hometown):
-    
+    users[person]["home_town"] = hometown
 
+change_hometown("Erik", "Edinburgh")
+
+print(user_hometown("Erik"))
 # 9. Add a pet dog to Erik called "fluffy"
+
+
 # 10. Add another person to the users dictionary
