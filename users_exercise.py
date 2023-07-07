@@ -82,7 +82,10 @@ print(user_pet_species("Avril", 0))
 
 # 5. Get the smallest of Erik's lottery numbers
 
+def get_lowest_number(person):
+    return min(user_lotto(person))
 
+print(get_lowest_number("Erik"))
 
 # 6. Return an list of Avril's lottery numbers that are even
 # 7. Erik is one lottery number short! Add the number `7` to be included in his lottery numbers
