@@ -2,6 +2,7 @@
 
 numbers = [1, 6, 2, 2, 7, 1, 6, 13, 99, 7]
 dataset = [11, 6, 4, 99, 7, 11]
+test_data = [5, 13, 2]
 # 1. Print out a list of the even integers:
 
 def even_numbers(list_of_numbers):
@@ -37,11 +38,11 @@ print(check(numbers))
 def sum_skipping(list_of_numbers):
     sum_total = iter(list_of_numbers)
     total = 0
-    for x in sum_total:
-        if x == 6:
+    for num in sum_total:
+        if num == 6:
             7 in sum_total
         else:
-            total += x
+            total += num
     return total
     
 print(sum_skipping(numbers))
@@ -53,8 +54,14 @@ print(sum_skipping(numbers))
 #
 #    So [5, 13, 2] would have sum of 5. 
 
+def unlucky_sum(list_of_numbers):
+    total = 0
+    for num in list_of_numbers:
+        if num == 13:
+            continue
+        else:
+            total += num
+    return total
 
-
-
-
-
+print(unlucky_sum(test_data))
+print(unlucky_sum(numbers))
